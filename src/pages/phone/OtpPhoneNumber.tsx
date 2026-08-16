@@ -16,6 +16,7 @@ function OtpPhoneNumber() {
   const sendOtpHandler = () => {
     if (!phoneNumber || phoneNumber.length < 10) {
       setError("please enter your phone number");
+      console.log(error)
       return;
     }
 
@@ -50,13 +51,14 @@ function OtpPhoneNumber() {
           <div className="w-57 h-15">
             <Input
               type="tel"
+              inputMode="numeric"
               placeholder="000 000 0000"
               value={phoneNumber}
               onChange={(e) => {
                 setPhoneNumber(e.target.value);
                 setError("");
               }}
-              error={!!error}
+              error={error !== ""}
               errorMessage={error}
               helperText={error}
               variant="outline"

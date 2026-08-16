@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 import { cn } from "../../../core/lib/cn";
 import type { InputSize, InputVariant } from "./Input.js";
